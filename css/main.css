@@ -1,0 +1,354 @@
+:root {
+    --hovercolor: #a79fff;
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+body{
+    background: #44406f;
+    padding: 10px 20px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+}
+
+/* ===Hero=== */
+
+.hero{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hero div{
+    margin: 0 20px;
+    color:white;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.hero div:hover{
+    color: #a79fff;
+    transform: scale(1.1);
+}
+
+
+/* ===Logo=== */
+
+img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.logo:hover img{
+    transform: scale(1.1);
+}
+
+/* ===Login=== */
+
+.login button{
+    padding: 8px 18px;
+    background: #dadada;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+}
+
+.login i{
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+}
+
+.login:hover button{
+    transform: scale(1.1);
+}
+
+/* ===Index-Genre=== */
+
+.dropdown{
+    visibility: hidden;
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    margin-top: 1px;
+    background: #343a40;
+    border-radius: 15px;
+    padding: 10px;
+    opacity: 0;
+}
+
+a{
+    color: white;
+    margin: 0 8px;
+    text-decoration: none;
+}
+
+.line1, .line2{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.hero .genre:hover >.dropdown,
+.dropdown:hover{
+    visibility: visible;
+    opacity: 1;
+}
+
+.dropdown a:hover{
+    color:var(--hovercolor);
+    transform: scale(1.1);
+}
+
+.hero div:hover .dropdown{
+    transform: none !important;
+}
+
+/* ===Title=== */
+.h1 h1{
+    display: flex;
+    justify-content: center;
+    font-size: 300%;
+    color: var(--light);
+    margin: 60px;
+}
+
+.titleh1:hover{
+    color: var(--hovercolor);
+}
+
+/* ===Search=== */
+
+.search_box{
+    display: flex;
+    justify-content: center;
+    margin: 60px;
+}
+
+.search_input{
+    width: 600px;
+    height: 50px;
+    outline: none;
+    border: none;
+    border-radius: 25px 0 0 25px;
+    padding: 0 10px 0 30px;
+    font-size: 30px;
+}
+
+.search_button{
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--hovercolor);
+    border-radius: 0 25px 25px 0;
+}
+
+/* ===Body=== */
+
+.title_body{
+    display: flex;
+    justify-content: left;
+    
+}
+
+.title_body h3{
+    color: var(--light);
+    margin: 0 5px 0 0;
+    font-size: 200%;
+}
+
+.title_body h3:hover{
+    color: var(--hovercolor);   
+}
+
+.titleh3 h3{
+    color: var(--light);
+    margin: 0 5px 0 0;
+    font-size: 200%;
+}
+
+.title_body button{
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin: 0 5px;
+    font-size: 15px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.title_body i{
+    font-size: 100%;
+    padding: 5px;
+}
+
+/* ===Movie=== */
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    overflow: hidden;
+    height: 300px;
+}
+
+.card1{
+    width: 160px;
+}
+.card{
+    display: flex;
+    flex: 1;
+    flex-basis: 150px;
+    flex-grow: 0;
+    height: 200px;
+    background: #fff;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    box-shadow: 0px 4px 7px rgba(0,0,0,.5);
+    overflow: hidden;
+    position: relative;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+}
+
+.descriptions{
+    position: absolute;
+    background-color: rgba(255,255,255,.7);
+    width: 150px;;
+    height: 200px;;
+    transition: all .7s ease-in-out;
+    padding: 5px;
+    box-sizing: border-box;
+    clip-path: circle(0% at 100% 100%);
+    overflow: hidden;
+}
+
+.card:hover .descriptions{
+    left:0px;
+    transition: all .7s ease-in-out;
+    clip-path: circle(75%);
+}
+
+.card:hover{
+    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+    box-shadow: 0px 2px 3px rgba(0,0,0,.3);
+    transform: scale(.97);
+}
+
+.card:hover img{
+    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+    transform: scale(1.6) rotate(20deg);
+    filter: blur(3px);
+}
+
+.card p{
+    margin-top: 3px;
+    line-height: 16px;
+    height: 70%;
+}
+
+.card button{
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    width: fit-content;
+    height: 40px;
+    cursor: pointer;
+    border-style: none;
+    background-color: var(--hovercolor);
+    color:#fff;
+    font-size: 15px;
+    outline: none;
+    box-shadow: 0px 2px 3px rgba(0,0,0,.4);
+    transition: all .5s ease-in-out;
+}
+
+.card button:hover{
+    transform: scale(.95) translateX(-5px);
+    transition: all .5s ease-in-out;
+}
+
+/* Movie Name  */
+
+p.name{
+    color: var(--light);
+    width: 150px;
+    height: 28px;
+    padding: 10px 5px 5px 5px;
+    overflow: hidden;
+    font-size: 105%;
+}
+
+p.name:hover{
+    color: var(--hovercolor);
+    scale: 0.95;
+    transition: 0.5s;
+}
+
+.footer_moviename{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    color: var(--light);
+    font-size: 95%;
+}
+
+/* ===Lasted=== */
+.hover_h3:hover{
+    color: var(--hovercolor);
+}
+
